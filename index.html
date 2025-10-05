@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>protfolio</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    body {
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18, 18, 62);
+
+    }
+
+    nav ul {
+        display: flex;
+        justify-content: center;
+    }
+
+    nav ul li {
+        list-style: none;
+        margin: 0px 23px;
+    }
+
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+    }
+
+    nav ul li a:hover {
+        color: rgb(150, 150, 159);
+        font-size: 1.04rem;
+    }
+
+    .left {
+        font-size: 1.5rem;
+    }
+
+    .firstsection {
+        display: flex;
+        justify-content: space-around;
+        margin: 130px 0px;
+        align-items: center;
+
+    }
+
+    .firstsection>div {
+        width: 33%;
+    }
+
+    .leftsection {
+        font-size: 3rem;
+
+    }
+
+    .rigthsection img {
+        width: 80%;
+        margin: 50px;
+
+    }
+
+    .textpurpale {
+        color: rgb(199, 112, 199);
+    }
+
+    .secondsection {
+        max-width: 80vw;
+        margin: auto;
+        height: 80vh;
+
+    }
+
+    main hr {
+        border: 0;
+        background: rgb(155, 138, 138);
+        height: 1.2px;
+        margin: 40px 84px;
+    }
+
+    .secondsection h1 {
+        font-size: 1.9rem;
+    }
+
+    .textgray {
+        color: gray;
+    }
+
+    .secondsection .box {
+        background: white;
+        width: 150vh;
+        height: 2px;
+        margin: 56px 0px;
+        display: flex;
+
+    }
+
+    .secondsection .vartical {
+        height: 93px;
+        width: 1px;
+        background-color: white;
+        margin: 0px 86px;
+
+    }
+
+    .vertical-title {
+        position: relative;
+        top: 75px;
+        width: 150px;
+    }
+
+    .vartical-desc {
+        position: relative;
+        top: 80px;
+        width: 150px;
+        font-size: 9px;
+    }
+
+    .image-top {
+        width: 23px;
+        position: relative;
+        top: -32px;
+        left: -9px;
+    }
+     footer {
+      background: #1e1e1e;
+      padding: 50px 20px 20px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-col h3 {
+      margin-bottom: 15px;
+      font-size: 20px;
+      color: #ff6a00;
+    }
+
+    .footer-col p {
+      color: #ccc;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-col ul li {
+      margin: 10px 0;
+    }
+
+    .footer-col ul li a {
+      text-decoration: none;
+      color: #aaa;
+      font-size: 15px;
+      transition: 0.3s;
+    }
+
+    .footer-col ul li a {
+  text-decoration: none;
+  color: #aaa;
+  font-size: 15px;
+  transition: 0.3s ease;
+  position: relative;
+}
+
+/* Existing hover */
+.footer-col ul li a:hover {
+  color: #ff6a00;
+  padding-left: 5px;
+  transform: scale(1.05); /* Slight zoom */
+}
+
+/* Underline animation */
+.footer-col ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -3px;
+  width: 0;
+  height: 2px;
+  background: #ff6a00;
+  transition: width 0.3s ease-in-out;
+}
+
+.footer-col ul li a:hover::after {
+  width: 100%;
+}
+
+/* Optional background highlight on hover */
+.footer-col ul li a:hover {
+  background: rgba(255, 106, 0, 0.1);
+  border-radius: 4px;
+  padding-left: 8px;
+}
+
+    .social-links a {
+      display: inline-block;
+      margin-right: 10px;
+      color: #aaa;
+      font-size: 20px;
+      transition: 0.3s;
+    }
+
+    .social-links a:hover {
+      color: #ff6a00;
+      transform: scale(1.2);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      margin-top: 30px;
+      border-top: 1px solid #333;
+      padding-top: 15px;
+      font-size: 14px;
+      color: #aaa;
+    }
+    .btn {
+      padding: 14px 32px;
+      font-size: 18px;
+      font-weight: bold;
+      color: #fff;
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    }   
+    .btn:hover
+    {
+        transform: translateY(-4px) scale(1.05);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      background: linear-gradient(45deg, #ee0979, #ff6a00);       
+    }  
+    .btn:active {
+      transform: translateY(2px) scale(0.98);
+    }     
+</style>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">D'portfolio</div>
+            <div class="rigth"></div>
+            <ul>
+                <li><a href="/">HOME</a></li>
+                <li><a href="/">ABOUT</a></li>
+                <li><a href="/">Services</a></li>
+                <li><a href="/">Project</a></li>
+                <li><a href="/">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">Hi, my name is<span class="textpurpale"> Darshan</span>
+                <div>and i'm a passionate</div>
+                <span id="element"></span>
+                <div class="button">
+                    <button class="btn">Download Resume</button>
+                    <button class="btn">Visit Github</button>
+                </div>
+            </div>
+            <div class="rigthsection">
+                <img src="developer.png">
+            </div>
+
+        </section>
+        <hr class="hr">
+        <section class="secondsection">
+            <span class="textgray">What I Have Done So far</span>
+            <h1>Work Exprience</h1>
+            <div class="box">
+                <div class="vartical">
+                    <img class="image-top" src="preview.png">
+                    <div class="vertical-title">
+                        HTML DEVELOPER (2010-2015)
+                    </div>
+
+                    <div class="vartical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit eos tempora nemo autem
+                        sit suscipit ex dolor velit. Nisi inventore dicta expedita eveniet consequatur. Laborum qui
+                        facere molestiae beatae?
+                    </div>
+                </div>
+                <div class="vartical">
+                    <img class="image-top" src="css.png">
+                    <div class="vertical-title">
+                        HTML DEVELOPER (2010-2015)
+                    </div>
+
+                    <div class="vartical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit eos tempora nemo autem
+                        sit suscipit ex dolor velit. Nisi inventore dicta expedita eveniet consequatur. Laborum qui
+                        facere molestiae beatae?
+                    </div>
+                </div>
+                <div class="vartical">
+                    <img class="image-top" src="js.png">
+                    <div class="vertical-title">
+                        HTML DEVELOPER (2010-2015)
+                    </div>
+
+                    <div class="vartical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit eos tempora nemo autem
+                        sit suscipit ex dolor velit. Nisi inventore dicta expedita eveniet consequatur. Laborum qui
+                        facere molestiae beatae?
+                    </div>
+                </div>
+                <div class="vartical">
+                    <img class="image-top" src="whatsapp.png">
+                    <div class="vertical-title">
+                        HTML DEVELOPER (2010-2015)
+                    </div>
+
+                    <div class="vartical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit eos tempora nemo autem
+                        sit suscipit ex dolor velit. Nisi inventore dicta expedita eveniet consequatur. Laborum qui
+                        facere molestiae beatae?
+                    </div>
+                </div>
+                <div class="vartical">
+                    <img class="image-top" src="instagram.png">
+                    <div class="vertical-title">
+                        HTML DEVELOPER (2010-2015)
+                    </div>
+
+                    <div class="vartical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit eos tempora nemo autem
+                        sit suscipit ex dolor velit. Nisi inventore dicta expedita eveniet consequatur. Laborum qui
+                        facere molestiae beatae?
+                    </div>
+                </div>
+                <div class="vartical">
+                    <img class="image-top" src="youtube.png">
+                    <div class="vertical-title">
+                        HTML DEVELOPER (2010-2015)
+                    </div>
+
+                    <div class="vartical-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium odit eos tempora nemo autem
+                        sit suscipit ex dolor velit. Nisi inventore dicta expedita eveniet consequatur. Laborum qui
+                        facere molestiae beatae?
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <div class="footer-container">
+      <div class="footer-col">
+        <h3>Darshan Developer</h3>
+        <p>Building modern and responsive web solutions. Passionate about coding and design.</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contact</h3>
+        <p>Email: darshan@example.com</p>
+        <p>Phone: +91 98765 43210</p>
+        <div class="social-links">
+          <a href="#"><i class="fab fa-facebook"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Darshan Portfolio | All Rights Reserved
+    </div>
+  </footer>
+    <!-- Setup and start animation! -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Web Developer.', '&amp;I Am a Currently learning.'],
+            loop: true,
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
